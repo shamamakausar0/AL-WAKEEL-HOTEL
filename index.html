@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Wakeel Hotel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<style>
+    body {
+        background-color: #F5F0E6;
+        font-family: Georgia, serif;
+    }
+
+    .hotel-header {
+        background: linear-gradient(to right, #171717, #34302A);
+        text-align: center;
+        padding: 25px;
+    }
+
+    .hotel-header h1 {
+        color: #D4AF37;
+        font-size: 45px;
+        font-weight: bold;
+        letter-spacing: 4px;
+    }
+
+    .hotel-header h2 {
+        color: #F5F0E6;
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+
+    .carousel-item img {
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-caption {
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        padding: 15px;
+        bottom: 25px;
+    }
+
+    .carousel-caption h5 {
+        color: #D4AF37;
+        font-size: 27px;
+        font-weight: bold;
+    }
+
+    .carousel-caption p {
+        color: white;
+        font-size: 15px;
+    }
+
+    @media (max-width: 576px) {.hotel-header {
+    padding: 18px 10px;
+}
+
+.hotel-header h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.hotel-header h2 {
+    font-size: 16px;
+    letter-spacing: 1px;
+}        .carousel-item img {
+            height: 300px;
+        }
+
+        .carousel-caption {
+            padding: 5px;
+            bottom: 10px;
+        }
+
+        .carousel-caption h5 {
+            font-size: 18px;
+        }
+
+        .carousel-caption p {
+            font-size: 11px;
+        }
+    }.menu-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.menu-title {
+    color: #8B6914;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.menu-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    height: 100%;
+}
+
+.menu-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.menu-card .card-body {
+    background-color: #fffaf0;
+}
+
+.menu-card h5 {
+    color: #5B3518;
+    font-weight: bold;
+}
+
+.menu-price {
+    color: #8B6914;
+    font-weight: bold;
+    font-size: 18px;
+}
+.about-section {
+    background-color: #EDE3D2;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.about-section h2 {
+    color: #8B6914;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    color: #332719;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: auto;
+}
+.contact-section {
+    background-color: #EDE3D2;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-section h2 {
+    color: #8B6914;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.contact-section p {
+    color: #332719;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.contact-section h5 {
+    color: #5B3518;
+    font-weight: bold;
+}
+
+.hotel-footer {
+    background-color: #24211D;
+    color: #F5F0E6;
+    text-align: center;
+    padding: 22px 10px;
+}
+
+.hotel-footer h5 {
+    color: #D4AF37;
+    letter-spacing: 2px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.menu-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.menu-card img {
+    transition: transform 0.4s;
+}
+
+.menu-card:hover img {
+    transform: scale(1.05);
+}
+
+
+.navbar .nav-link {
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #D4AF37;
+}
+.menu-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #D4AF37;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.menu-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.menu-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-price {
+    margin-top: auto;
+    padding-top: 10px;
+}
+</style>
+</head>
+<body>
+    
+  <header class="hotel-header">
+    <h1>AL-WAKEEL</h1>
+    <h2>A ROYAL LEGACY OF FLAVOURS</h2>
+    <p class="text-light mb-0">
+        HOTEL & RESTAURANT
+    </p>
+</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">AL-WAKEEL</a>
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#hotelNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="hotelNavbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu">Our Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="container">
+        <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="b2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-block">
+        <h5>Excuisite Taste</h5>
+        <p>Experience the richness of perfectly spiced biryani, layered with authentic flavours and crafted to perfection.</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="cuisine.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-block">
+        <h5>An Aroma Worth Falling For.</h5>
+        <p>From royal Mughlai delicacies to sizzling kebabs, discover a world of taste in every serving.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="hotel.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-block">
+        <h5>Where Hospitality Meets Elegance</h5>
+        <p>An inviting destination for delightful dining and memorable moments.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<br>
+<div class="container" id="menu">
+    <figure class="figure">
+ <div class="container menu-section" id="menu">
+
+    <h2 class="menu-title">OUR SPECIAL MENU</h2>
+    <p>Discover the authentic taste of royal cuisine</p>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card menu-card">
+                <img src="biryani.jpg" class="card-img-top" alt="Biryani">
+                <div class="card-body">
+                    <h5>Royal Chicken Biryani</h5>
+                    <p>Fragrant rice cooked with aromatic spices and tender chicken.</p>
+                    <p class="menu-price">₹250</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card menu-card">
+                <img src="cuisine.jpg" class="card-img-top" alt="Mughlai cuisine">
+                <div class="card-body">
+                    <h5>Mughlai Special</h5>
+                    <p>A rich and delicious preparation inspired by royal Mughlai flavours.</p>
+                    <p class="menu-price">₹300</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card menu-card">
+                <img src="food2.jpg" class="card-img-top" alt="Restaurant special">
+                <div class="card-body">
+                    <h5>Chef's Special</h5>
+                    <p>A special selection prepared with authentic spices and fresh ingredients.</p>
+                    <p class="menu-price">₹280</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+<section class="about-section" id="about">
+    <div class="container">
+
+        <h2>ABOUT AL-WAKEEL</h2>
+
+        <p>
+            Welcome to AL-WAKEEL HOTEL & RESTAURANT,
+            where tradition meets taste. We bring you
+            the rich flavours of authentic Mughlai cuisine,
+            delicious biryanis, sizzling kebabs and a
+            variety of mouth-watering delicacies.
+
+            Every dish is prepared with carefully selected
+            ingredients and aromatic spices to give you
+            a memorable dining experience.
+
+            At AL-WAKEEL, every meal is a celebration
+            of flavour, quality and hospitality.
+        </p>
+
+    </div>
+</section>
+<section class="contact-section" id="contact">
+
+    <div class="container">
+
+        <h2>CONTACT US</h2>
+
+        <h5>Visit AL-WAKEEL HOTEL & RESTAURANT</h5>
+
+        <p>📍 Address: Al- Wakeel Hotel, Near Dargah, Kalamna Road,B B Colony, Kamptee Nagpur
+</p>
+
+        <p>☎ Phone: 1234xx xx xx</p>
+
+        <p>✉ Email:alwakeel@gmail.com</p>
+
+        <p>We look forward to serving you!</p>
+
+    </div>
+
+</section>
+
+<footer class="hotel-footer">
+
+    <h5>AL-WAKEEL</h5>
+
+    <p>A Royal Legacy of Flavours</p>
+
+    <p class="mb-0">
+        © 2026 AL-WAKEEL HOTEL & RESTAURANT. All Rights Reserved.
+    </p>
+
+</footer>
+</body>
+</html>
